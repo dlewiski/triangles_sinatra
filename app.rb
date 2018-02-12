@@ -15,5 +15,6 @@ get('/triangle') do
   side2 = params.fetch('side2')
   side3 = params.fetch('side3')
   @result = triangle.triangle_type(side1, side2, side3)
+  # binding.pry
   erb(:output)
 end
