@@ -1,13 +1,17 @@
 <h1><%= @description %></h1>
 
-<form action="/play">
+<form action="/triangle">
   <div class="form-group">
-    <label for="p1">Player 1:</label>
-    <input id="p1" name="gesture1" class="form-control" type="text">
+    <label for="side1">Frist triangle side:</label>
+    <input id="side1" name="side1" class="form-control" type="text">
   </div>
   <div class="form-group">
-    <label for="p2">Player 2:</label>
-    <input id="p2" name="gesture2" class="form-control" type="text">
+    <label for="side2">Second triangle side:</label>
+    <input id="side2" name="side2" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="side3">Third triangle side:</label>
+    <input id="side3" name="side3" class="form-control" type="text">
   </div>
   <button type="submit" class="btn">Go!</button>
 </form>

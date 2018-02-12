@@ -2,17 +2,18 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'pry'
 also_reload('lib/**/*.rb')
-require './lib/rocky6'
+require './lib/triangles'
 
 get('/') do
-  @description = "Hi Jared!!! Welcome to another beautiful Monday at Epicodus"
+  @description = "Welcome to the best triangle calculatore EVER"
   erb(:input)
 end
 
-get('/play') do
-  game = RPS.new()
-  p1 = params.fetch('gesture1')
-  p2 = params.fetch('gesture2')
-  @result = game.winner_calc?(p1, p2)
+get('/triangle') do
+  triangle = Triangle.new()
+  side1 = params.fetch('side1')
+  side2 = params.fetch('side2')
+  side3 = params.fetch('side3')
+  @result = triangle.triangle_type(side1, side2, side3)
   erb(:output)
 end
